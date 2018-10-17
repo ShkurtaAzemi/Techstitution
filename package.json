@@ -1,0 +1,25 @@
+{
+  "name": "techstitution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShkurtaAzemi/Techstitution.git"
+  },
+  "author": "Shkurt\u0016\u0016ë Azemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShkurtaAzemi/Techstitution/issues"
+  },
+  "homepage": "https://github.com/ShkurtaAzemi/Techstitution#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^2.2.33",
+    "popups": "^1.1.3"
+  }
+}

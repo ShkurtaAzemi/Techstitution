@@ -1,0 +1,60 @@
+<% include partials/header %>
+<div class="table-responsive-lg showtab" >
+<table class="table table-bordered ">
+    <tr class="table-info">
+        <td colspan="2">Prokurimi</td></tr>
+    <tr>
+      <td scope="col">Numri rendor i prokurimit</td>
+      <td scope="col"> <%= doc.numri %></td>
+    </tr>
+
+  
+    <tr>
+      <td scope="row">Lloji i prokurimit</td>
+      <td><%= doc.lloji %></td>
+    </tr>
+    <tr>
+      <td scope="row">Aktiviteti i prokurimit</td>
+      <td><%= doc.aktiviteti %></td>
+    </tr>
+    <tr class="table-info">
+        <td colspan="2">Datat</td></tr>
+    <tr>
+    <tr>
+      <td scope="row">Data e inicimit të projektit</td>
+      <td><%= doc.date1 %></td>
+    </tr>
+    <tr>
+      <td scope="row">Data e publikimit të shpalljes</td>
+      <td><%= doc.date2 %></td>
+    </tr>
+    <tr>
+      <td scope="row"> Data e nënshkrimit të kontratës</td>
+      <td><%= doc.date3 %></td>
+    </tr>
+    <tr>
+      <td scope="row">Afatet për implementimin e kontratës</td>
+      <td><%= doc.date4 %> -- <%= doc.date5 %></td>
+    </tr>
+    <tr>
+      <td scope="row">Data e përmbylljes së kontratës</td>
+      <td> <%= doc.date6 %></td>
+    </tr>
+    <tr class="table-info">
+        <td colspan="2">Çmimi dhe të dhënat tjera</td></tr>
+    <tr>
+    <tr>
+      <td scope="row"> Çmimi i kontratës (duke përfshirë të gjitha taksat)</td>
+      <td><%= doc.cmimi1 %></td>
+    </tr>
+    <tr>
+      <td scope="row">Çmimi total i paguar për kontratë</td>
+      <td><%= doc.cmimi2 %></td>
+    </tr>
+    <tr>
+      <td scope="row">Emri dhe mbiemri të cilit i është dhënë kontrata</td>
+      <td><%= doc.emri %></td>
+    </tr>
+</table>
+</div>
+<% include partials/footer %>

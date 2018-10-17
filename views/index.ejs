@@ -1,0 +1,75 @@
+<% include partials/header %>
+
+
+<div class="table-responsive-lg margin" >
+<table class="table table-striped tab" >
+ 
+  <thead>
+      <tr class="bg-info">
+     <div class="p-3 mb-2 bg-info text-white" style="margin-top:1%;text-align:center;font-size:25px;">Kontratat e shtuara
+     </div>
+      <th scope="col" style="width:150px;">Numri rendor i prokurimit</th>
+      <th scope="col"  style="width:150px;">Lloji i prokurimit</th>
+      <th scope="col" style="width:150px;">Aktiviteti i prokurimit</th>
+      <th scope="col" style="width:150px;">Data e inicimit të aktivitetit të prokurimit</th>
+      <th scope="col" style="width:150px;">Data e publikimit të shpalljes</th>
+      <th scope="col" style="width:150px;">Data e nënshkrimit të kontratës</th>
+      <th scope="col" colspan="3" style="width:150px;">Afatet për implementimin e kontratës</th>
+      <th scope="col" style="width:150px;">Data e përmbylljes së kontratës</th>
+      <th scope="col" style="width:150px;">Çmimi i kontratës (duke perfshirë të gjitha taksat)</th>
+      <th scope="col" style="width:150px;">Çmimi total i paguar për kontratë</th>
+      <th scope="col" style="width:150px;">Emri dhe mbiemri të cilit i është dhënë kontrata</th>
+      <th scope="col" style="width:150px;" colspan="3">Opsionet</th>
+
+      </tr>
+    </thead>
+    
+ <!-- 
+Numri rendor i prokurimit-numri
+Lloji i prokurimit-lloji
+Aktiviteti i prokurimit-aktiviteti
+Data e inicimit te aktivitetit te prokurimit-date1
+Data e publikimit te shpalljes-date2
+Data e nenshkrimit te kontrates-date3
+Afatet per implementimin e kontrates-date4, date5
+Data e permbylljes se kontrates-date6
+Cmimi i kontrates(duke perfshire te gjitha taksat)-cmimi1
+Cmimi total i paguar per kontrate-cmimi2
+Emri dhe mbiemri te cilit i eshte dhene kontrata-emri
+-->
+  <tbody >
+       <% docs.map(function(doc){ %>
+    <tr>
+      <td ><%= doc.numri %></td>
+      <td ><%= doc.lloji %></td>
+      <td><%= doc.aktiviteti %></td>
+      <td ><%= doc.date1%></td>
+      <td><%= doc.date2 %></td>
+      <td ><%= doc.date3 %></td>
+      <td colspan="3"><%= doc.date4%> <%= doc.date5 %></td>
+      <td ><%= doc.date6 %></td>
+      <td><%= doc.cmimi1%></td>
+      <td ><%= doc.cmimi2 %></td>
+      <td><%= doc.emri %></td>
+      <td colspan="">
+          <a href="/todos/edit/<%= doc._id %>" class="edit" data-toggle="modal">
+              <i class="material-icons" data-toggle="tooltip" title="Ndrysho">&#xE254;</i>
+          </a>
+      </td>
+      <td>
+           <a href="/todos/delete/<%= doc._id %>" class="delete" onclick="return confirm('Dëshironi të fshini kontratën?');" ><i class="material-icons" data-toggle="tooltip" title="Fshij">&#xE872;</i></a>
+      </td>
+      <td >
+          <a href="/todos/<%= doc._id %>"> <i class="material-icons" title="Shiko">&#xE873;</i></a>
+      </td> 
+    </tr>
+      <% }) %>
+  </tbody>
+    
+
+    </table>
+</div>
+<div style="text-align:center">
+    <a class="btn btn-info btn-lg" href="/add" role="button" >Shto një kontratë të re</a>
+</div>
+<% include partials/footer %>
